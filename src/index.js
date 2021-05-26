@@ -31,5 +31,20 @@ app.get('/api/people', (req, res) => {
   res.json(people);
 });
 
+//get one person
+app.get('/api/person/:id', (req, res) => {
+  const paramId = req.params.id;
+  const found = people.find((person) => person.id === paramId);
+
+  if (!found) {
+    res
+      .status(404)
+      .json({ errorMsg: `sorry, person with id ${paramId} was not found` });
+  }
+  //paziurim parametra
+  //   res.send(`id you are looking for ${paramId}`);
+  res.json(found);
+});
+
 //paleidzia serveri ir klausosi http ir kt requestu nurodytu portu
 app.listen(3000, () => console.log('server is running'));
