@@ -1,0 +1,28 @@
+{
+  "name": "expresiukas",
+  "version": "1.0.0",
+  "description": "WE start making backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alejupas/express.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "M.K.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alejupas/express/issues"
+  },
+  "homepage": "https://github.com/Alejupas/express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
