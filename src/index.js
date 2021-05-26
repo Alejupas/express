@@ -17,10 +17,10 @@ const aboutPath = path.join(__dirname, 'html', 'about.html');
 app.use(express.static(htmlPath));
 
 //main route
-// app.get('/', (req, res) => {
-//   //   res.send('<h1>Hello pacan backender from express</h1>');
-//   res.sendFile(indexPath);
-// });
+app.get('/', (req, res) => {
+  //   res.send('<h1>Hello pacan backender from express</h1>');
+  res.sendFile(indexPath);
+});
 // app.get('/about', (req, res) => res.sendFile(aboutPath));
 
 // console.log('works');
