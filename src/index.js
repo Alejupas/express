@@ -23,7 +23,13 @@ app.use(express.static(htmlPath));
 // });
 // app.get('/about', (req, res) => res.sendFile(aboutPath));
 
-console.log('works');
+// console.log('works');
+
+// OUR API
+app.get('/api/people', (req, res) => {
+  //grazinam json
+  res.json(people);
+});
 
 //paleidzia serveri ir klausosi http ir kt requestu nurodytu portu
 app.listen(3000, () => console.log('server is running'));
