@@ -5,6 +5,7 @@ const path = require('path');
 const app = express();
 
 const indexPath = path.join(__dirname, 'html', 'index.html');
+const aboutPath = path.join(__dirname, 'html', 'about.html');
 console.log('indexPath', indexPath);
 
 //main route
@@ -12,6 +13,7 @@ app.get('/', (req, res) => {
   //   res.send('<h1>Hello pacan backender from express</h1>');
   res.sendFile(indexPath);
 });
+app.get('/about', (req, res) => res.sendFile(aboutPath));
 
 console.log('works');
 
