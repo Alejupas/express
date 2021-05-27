@@ -17,7 +17,7 @@
       // get people fetch
       document.getElementById('ppl').addEventListener('click', () => {
         console.log('click');
-        fetch('http://localhost:3000/api/people')
+        fetch('/api/people')
           .then((resp) => resp.json())
           .then((data) => console.log(' data', data))
           .catch((err) => console.error(err.message));
@@ -25,11 +25,11 @@
       // send post data fetch json
       document.getElementById('send-data').addEventListener('click', () => {
         console.log('sending post data');
-        fetch('/api/people', {
-          method: 'POST',
+        fetch('/api/people/1', {
+          method: 'PUT',
           body: JSON.stringify({
-            name: 'James',
-            surname: 'Jameson',
+            name: 'Mike',
+            // surname: 'Tyson',
           }),
           headers: {
             'Content-type': 'application/json; charset=UTF-8',
