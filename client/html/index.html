@@ -35,7 +35,7 @@
             'Content-type': 'application/json; charset=UTF-8',
           },
         })
-          .then((resp) => resp.text())
+          .then((resp) => resp.json())
           .then((data) => console.log(' data post rq', data))
           .catch((err) => console.error(err.message));
       });

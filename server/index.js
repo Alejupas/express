@@ -19,8 +19,12 @@ const logger = (req, res, next) => {
 // naudoti logger funkcija kaip middle ware
 app.use(logger);
 
-// current paths
+//json duomenu atkodavimas/istraukimas is http post requesto
+app.use(express.json());
+//kad galetume dirbti su formos duomenimis body dalyje
+app.use(express.urlencoded({ extended: false }));
 
+// current paths
 const htmlPath = path.join(__dirname, '../client', 'html');
 const indexPath = path.join(__dirname, '../client', 'html', 'index.html');
 const aboutPath = path.join(__dirname, '../client', 'html', 'about.html');
