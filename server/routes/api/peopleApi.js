@@ -27,8 +27,15 @@ router.get('/:id', (req, res) => {
 // Create one people Endpoint
 // gauti duomenis is vartojo formos arba json pavidalu ir sukuri nauja partotoja tarp savo people
 router.post('/', (req, res) => {
-  console.log(' req.body', req.body);
-  res.send(req.body);
+  console.log('this is what was set to server in body ', req.body);
+  // prideti nauja people objekta(zmogu pridedu)
+  const newPerson = {
+    id: (++personId).toString(),
+    name: req.body.name,
+    surname: req.body.surname,
+  };
+  people.push(newPerson);
+  res.json(people);
 });
 
 module.exports = router;
