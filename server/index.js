@@ -2,30 +2,29 @@
 const express = require('express');
 const path = require('path');
 
-const { people } = require('./server/js/people');
+const { people } = require('./js/people');
 
 // sukuriam express app objekta
 const app = express();
 
-//Middle ware - veiksmai vykstantys prie ara po serverio uzklausu
-//logger
+// Middle ware -- veiksmai vykstantys pries ar po serverio uzklausu
+// logger
 const logger = (req, res, next) => {
-  console.log('logger in action');
   console.log(
     `${req.protocol}://${req.get('host')}${
       req.originalUrl
-    } on:${new Date().toLocaleTimeString()}`
+    } on: ${new Date().toLocaleTimeString()}`
   );
   next();
 };
 
-//naudoti logger funkcija kaip middle ware
+// naudoti logger funkcija kaip middle ware
 app.use(logger);
 
 // current paths
 const htmlPath = path.join(__dirname, '../client', 'html');
 const indexPath = path.join(__dirname, '../client', 'html', 'index.html');
-const aboutPath = path.join(__dirname, 'html', 'about.html');
+const aboutPath = path.join(__dirname, '../client', 'html', 'about.html');
 // console.log(' indexPath', indexPath);
 
 // routes
