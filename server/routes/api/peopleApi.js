@@ -24,10 +24,10 @@ router.get('/:id', (req, res) => {
   res.json(found);
 });
 
-// Create on people Endpoint
-// gauti duomenis is vartotojo formos arba json pavidalu ir sukurti nauja vartotoja tarp savo people
+// Create one people Endpoint
+// gauti duomenis is vartojo formos arba json pavidalu ir sukuri nauja partotoja tarp savo people
 router.post('/', (req, res) => {
-  console.log('req body', req.body);
+  console.log(' req.body', req.body);
   res.send(req.body);
 });
 
