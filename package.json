@@ -4,7 +4,8 @@
   "description": "WE start making backend",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
+    "lint:srv": "./node_modules/.bin/eslint server"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/Alejupas/express#readme",
   "dependencies": {
+    "eslint": "^7.27.0",
     "express": "^4.17.1"
   },
   "devDependencies": {

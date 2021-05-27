@@ -1,6 +1,8 @@
+const { Router } = require('express');
+
 const people = [
   {
-    id: 'it51',
+    id: '1',
     name: 'Jonas',
     surname: 'Jonaitis',
     sex: 'male',
@@ -11,7 +13,7 @@ const people = [
     devices: ['laptop', 'phone'],
   },
   {
-    id: 'it52',
+    id: '2',
     name: 'Severija',
     surname: 'Piktutytė',
     sex: 'female',
@@ -22,7 +24,7 @@ const people = [
     devices: ['tablet', 'phone'],
   },
   {
-    id: 'it53',
+    id: '3',
     name: 'Valdas',
     surname: 'Vilktorinas',
     sex: 'male',
@@ -33,7 +35,7 @@ const people = [
     devices: ['laptop', 'tablet', 'phone', 'drone'],
   },
   {
-    id: 'it54',
+    id: '4',
     name: 'Virginijus',
     surname: 'Uostauskas',
     sex: 'male',
@@ -44,7 +46,7 @@ const people = [
     devices: ['tablet', 'phone'],
   },
   {
-    id: 'it55',
+    id: '5',
     name: 'Samanta',
     surname: 'Uostauskienė',
     sex: 'female',
@@ -55,7 +57,7 @@ const people = [
     devices: ['laptop', 'phone'],
   },
   {
-    id: 'it56',
+    id: '6',
     name: 'Janina',
     surname: 'Stalautinskienė',
     sex: 'female',
@@ -67,6 +69,4 @@ const people = [
   },
 ];
 
-module.exports = {
-  people,
-};
+module.exports = people;

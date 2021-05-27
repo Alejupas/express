@@ -9,14 +9,34 @@
   <body>
     <h1>Express</h1>
     <a href="/about">about</a>
+    <a href="/api/people">people api</a>
     <button id="ppl">Get people</button>
+    <button id="send-data">Send DATA</button>
 
     <script>
+      // GET people fetch
       document.getElementById('ppl').addEventListener('click', () => {
         console.log('click');
         fetch('http://localhost:3000/api/people')
           .then((resp) => resp.json())
           .then((data) => console.log(' data', data))
+          .catch((err) => console.error(err.message));
+      });
+
+      //send post data fetch json
+      document.getElementById('ppl').addEventListener('click', () => {
+        console.log('sending post data');
+        
+        fetch('api/people', {
+          method: "POST",
+          body: JSON.stringify({
+          name: "James",
+          surname: "Jameson",
+          }),
+          headers: {'Content-type': 'application/json; charset=UTF-8',},
+        })
+          .then((resp) => resp.text())
+          .then((data) => console.log('data post rq', data))
           .catch((err) => console.error(err.message));
       });
     </script>
