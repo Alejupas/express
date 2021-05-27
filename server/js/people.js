@@ -66,6 +66,7 @@ const people = [
     devices: ['laptop', 'tablet', 'phone'],
   },
 ];
+
 module.exports = {
   people,
 };
